@@ -177,9 +177,6 @@
       content = container.firstChild;
     }
 
-    // Adding namespace to content element
-    content.setAttribute('xmlns', Chartist.namespaces.xmlns);
-
     // Creating the foreignObject without required extension attribute (as described here
     // http://www.w3.org/TR/SVG/extend.html#ForeignObjectElement)
     var fnObj = this.elem('foreignObject', attributes, className, insertFirst);
