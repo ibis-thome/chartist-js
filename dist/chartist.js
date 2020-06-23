@@ -14,7 +14,7 @@
   }
 }(this, function () {
 
-/* Chartist.js 0.11.4
+/* Chartist.js 0.11.6
  * Copyright © 2020 Gion Kunz
  * Free to use under either the WTFPL license or the MIT license.
  * https://raw.githubusercontent.com/gionkunz/chartist-js/master/LICENSE-WTFPL
@@ -26,7 +26,7 @@
  * @module Chartist.Core
  */
 var Chartist = {
-  version: '0.11.4'
+  version: '0.11.6'
 };
 
 (function (globalRoot, Chartist) {
@@ -3031,7 +3031,7 @@ var Chartist = {
         // If we don't have a label ahead and we have only two labels in total, we just take the remaining distance to
         // on the whole axis length. We limit that to a minimum of 30 pixel, so that labels close to the border will
         // still be visible inside of the chart padding.
-        labelLength = Math.max(this.axisLength - projectedValue, 30);
+        labelLength = Math.max(this.axisLength - projectedValue, this.stepLength);
       }
 
       // Skip grid lines and labels where interpolated label values are falsey (execpt for 0)
